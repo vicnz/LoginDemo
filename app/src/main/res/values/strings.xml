@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Login Example</string>
+    <string name="login_header">Login Demo</string>
+    <string name="username_field_placeholder">Username</string>
+    <string name="password_field_placeholder">Password</string>
+    <string name="login_button_label">Login</string>
+    <string name="exit_button_label">Exit</string>
+    <string name="close_button">Close</string>
+    <string name="welcome_label">Welcome!</string>
+    <string name="short_message">This is a basic and very simple login activity which demonstrates the usage of Intents, Toasts, and multiple Activities. Apparently the login credentials only accepts the value "admin" on the password field due to lack of usage on data saving mechanism.</string>
+</resources>
