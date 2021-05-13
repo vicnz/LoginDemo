@@ -7,5 +7,5 @@
     <string name="exit_button_label">Exit</string>
     <string name="close_button">Close</string>
     <string name="welcome_label">Welcome!</string>
-    <string name="short_message">This is a basic and very simple login activity which demonstrates the usage of Intents, Toasts, and multiple Activities. Apparently the login credentials only accepts the value "admin" on the password field due to lack of usage on data saving mechanism.</string>
+    <string name="short_message">This is a basic and very simple login activity which demonstrates the usage of Intents, Toasts, and multiple Activities. Apparently the login credentials only accepts the value \"admin\" , \"piercejohn\", and \"vicadamg\" on the password field due to lack of usage on data saving mechanism.</string>
 </resources>

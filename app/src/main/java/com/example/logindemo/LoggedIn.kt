@@ -29,4 +29,6 @@ class LoggedIn : AppCompatActivity() {
     private fun closeApplication(){
         exitProcess(-1)
     }
+
+
 }

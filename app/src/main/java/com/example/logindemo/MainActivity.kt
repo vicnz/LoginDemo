@@ -13,8 +13,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(bundlesavestate)
         setContentView(R.layout.activity_main)
 
+
+
         val logBtn = findViewById<Button>(R.id.loginBtn)
         val exitBtn = findViewById<Button>(R.id.exitBtn)
+
+        val usernameTextBox = findViewById<EditText>(R.id.usernameTxtBx)
+        val passwordTextBox = findViewById<EditText>(R.id.passwordTxtBx)
+
 
         //button clicked for exit
         exitBtn.setOnClickListener {
@@ -23,8 +29,6 @@ class MainActivity : AppCompatActivity() {
 
         //button clicked for login
         logBtn.setOnClickListener {
-            val usernameTextBox = findViewById<EditText>(R.id.usernameTxtBx)
-            val passwordTextBox = findViewById<EditText>(R.id.passwordTxtBx)
 
             val username  = usernameTextBox.text.toString().toLowerCase()
             val password = passwordTextBox.text.toString().toLowerCase()
@@ -33,25 +37,31 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
-    private fun validateUser(username: String?, password: String?){
+    private fun validateUser(usernameStr: String?, passwordStr: String?){
 
         /*
         *   @By Default our username and password are
-        *   @username = admin
-        *   @password = admin
+        *   @username = anything you enter
+        *   @password = admin | piercejohn | vicadamg
         *
-        * anything else is return of invalid user
+        * anything else is return as invalid user
         * due to knowledge limitation i have not yet grasp the concept
         * of database operation in android so we'll hard code the valid user
          */
 
-        if(username != ""){
-            if(password != "" || password == "admin"){
+        //hardcoded valid userpassword
+        val validPassword = arrayOf("admin", "piercejohn", "vicadamg")
+
+        //if username is empty
+        if(usernameStr != ""){
+
+            //if password is empty or not in the array
+            if(passwordStr != "" && passwordStr in validPassword){
                 //render valid user
                 val intent = Intent(this, LoggedIn::class.java)
-                intent.putExtra("username", username)
+                intent.putExtra("username", usernameStr)
 
+                //start new app page
                 startActivity(intent)
             }else{
                 //render invalid user
